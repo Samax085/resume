@@ -65,7 +65,6 @@ router.get('/summary', function (req, res) {
   })
 })
 
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
@@ -241,7 +240,6 @@ router.get('/Work', function (req, res) {
   })
 })
 
-<<<<<<< HEAD
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -320,7 +318,6 @@ router.get('/js', function (req, res) {
   })
 })
 
-=======
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
@@ -517,6 +514,6 @@ router.get('/bio', function (req, res) {
     },
   })
 })
->>>>>>> 5e72814f649208b62de43ac19c22ce747d6d3d52
+
 // Підключаємо роутер до бек-енду
 module.exports = router
