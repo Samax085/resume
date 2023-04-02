@@ -1,0 +1,134 @@
+<header>
+  <h1>Program</h1>
+</header>
+<body>
+  <main>
+    <section>
+      <div>
+        <h2>Excursion:</h2>
+        {{#with program}}
+          {{#with excursion}}
+            <h3>Name: {{name}};</h3>
+            <ul>
+              {{#with location}}
+              <li>City: <em>{{city}}</em>;</li>
+              <li>Country:
+                <em>{{country}}</em>;</li>
+              {{/with}}
+            </ul>
+            <h3>Date: <em>{{date}}</em></h3>
+        
+          
+            <hr />
+            <br />
+    </section>    
+      </div>
+
+    <section>
+      <div>
+        <h2>Program of excursion:</h2>
+          <div>
+            <ol>
+              <li>Name: <b>{{program.[0].name}};</b></li>            
+              <li>Type: <b>{{program.[0].type}};</b></li>            
+              <li>Duration: <b>{{program.[0].duration}};</b></li>
+
+                <h3>Details:</h3>
+
+                <ul>             
+                  <li>Name: <em>{{program.[0].details.museum.name}}</em>;</li>
+                </ul>
+
+                <h3>Location:</h3>  
+                    <ul>
+                      <li>Adrress: <em>{{program.[0].details.museum.location.address}};</em></li>
+                      <li>City: <em>{{program.[0].details.museum.location.city}};</em></li>
+                      <li>Country: <em>{{program.[0].details.museum.location.country}};</em></li>
+                    </ul>      
+            </ol>
+            <hr>
+            <br>
+            <br>  
+            <div>
+
+              <h3>Exhibits:</h3>
+                             
+                <ul>
+                   <li>Name: <em>{{program.[0].details.museum.exhibits.[0].name}};</em></li>
+                   <li>Artist: <em>{{program.[0].details.museum.exhibits.[0].artist}};</em></li>
+                   <li>Description: <em>{{program.[0].details.museum.exhibits.[0].description}};</em></li>
+                   <li>Audio guide:: <em>{{program.[0].details.museum.exhibits.[0].audio_guide}};</em></li>
+                   <hr><br>
+
+                   <li>Name: <em>{{program.[0].details.museum.exhibits.[1].name}};</em></li>
+                   <li>Artist: <em>{{program.[0].details.museum.exhibits.[1].artist}};</em></li>
+                   <li>Description: <em>{{program.[0].details.museum.exhibits.[1].description}};</em></li>
+                   <li>Audio guide:: <em>{{program.[0].details.museum.exhibits.[1].audio_guide}};</em></li>
+                </ul> 
+                                    
+                <hr><br>
+            </div>
+
+            <div>
+              <h3>Guide:</h3>
+                <br>
+                Name: <b>{{program.[0].details.guide.name}};</b><br>
+                Language: <b>{{program.[0].details.guide.language}};</b><br>
+                Rating: <b>{{program.[0].details.guide.rating}};</b>
+                <hr><hr><hr><br>
+            </div>
+
+            <div>
+            <ol>
+
+              <li>Name: <b>{{program.[1].name}};</b></li>            
+              <li>Type: <b>{{program.[1].type}};</b></li>            
+              <li>Duration: <b>{{program.[1].duration}};</b></li>
+
+                <h3>Details:</h3>
+
+                <ul>             
+                  <li>Name: <em>{{program.[1].details.venue.name}}</em>;</li>
+                </ul>
+
+                <h3>Location:</h3>  
+                    <ul>
+                      <li>Adrress: <em>{{program.[1].details.venue.location.address}};</em></li>
+                      <li>City: <em>{{program.[1].details.venue.location.city}};</em></li>
+                      <li>Country: <em>{{program.[1].details.venue.location.country}};</em></li>
+                    </ul>      
+            </ol>
+            </div>
+
+            <div>
+              <h3>Performers:</h3>
+              {{#each program.[1]}}
+                {{#each performers}}
+                 <ul>
+                  <li>Name: {{name}};</li>
+                  <li>Type: {{type}};</li>
+                 </ul>
+                {{/each}}
+              {{/each}}    
+
+                  <h3>Guide:</h3>
+                {{#each program.[1]}}
+                  {{#with guide}}
+                    Name: <b>{{name}};</b><br>
+                    Language: <b>{{language}};</b><br>
+                    Rating: <b>{{rating}};</b>
+                  {{/with}}
+                {{/each}}   
+              
+
+            </div>
+
+        {{/with}}
+          {{/with}}    
+          </div>
+    </section>
+         
+      
+    
+  </main>
+</body>
