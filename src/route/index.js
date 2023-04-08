@@ -522,7 +522,6 @@ router.get('/program', function (req, res) {
   })
 })
 
-<<<<<<< HEAD
 router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'default',
@@ -613,7 +612,10 @@ router.get('/car', function (req, res) {
         premium_paint: 595,
       },
       total: 28990,
-=======
+    },
+  })
+})
+
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -739,7 +741,6 @@ router.get('/web', function (req, res) {
           ],
         },
       ],
->>>>>>> bd9983b4dcea7e3799535da94f3c69ee0c941c56
     },
   })
 })
