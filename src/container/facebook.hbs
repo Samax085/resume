@@ -1,0 +1,251 @@
+<body>
+  <header>
+    <h1>Facebook</h1>
+  </header>
+
+  <main>
+    <div>
+      <h2>User:</h2>
+      <div class='card' style='width: 18rem;'>
+        <div class='card-body'>
+          <h5 class='card-title'>{{users.0.id}}</h5>
+          <h6
+            class='card-subtitle mb-2 text-body-secondary'
+          >{{users.0.name}}</h6>
+          <p class='card-text'>Gender:
+            {{users.0.gender}}<br />
+            Age: ({{users.0.age}})</p>
+          <a
+            class='btn btn-primary'
+            data-bs-toggle='collapse'
+            href='#collapseExample'
+            role='button'
+            aria-expanded='false'
+            aria-controls='collapseExample'
+          ><b>Friends:</b></a>
+          <div class='collapse' id='collapseExample'>
+            <div class='card card-body'>
+              <b>ID:
+                {{users.0.friends.0.id}};<br /></b>
+              Name:
+              {{users.0.friends.0.name}};<br />
+              Gender:
+              {{users.0.friends.0.gender}};<br />
+              Age: ({{users.0.friends.0.age}});<br />
+              <b>ID: {{users.0.friends.1.id}}</b>
+              Name:
+              {{users.0.friends.1.name}};<br />
+              Gender:
+              {{users.0.friends.1.gender}};<br />
+              Age: ({{users.0.friends.1.age}});<br />
+            </div>
+          </div>
+          <a
+            class='btn btn-primary'
+            data-bs-toggle='collapse'
+            href='#collapseExample'
+            role='button'
+            aria-expanded='false'
+            aria-controls='collapseExample'
+          ><b>Mutual friends:</b></a>
+          <div class='collapse' id='collapseExample'>
+            <div class='card card-body'>
+              <b>ID:
+                {{users.0.friends.0.mutual_friends.0.id}};<br
+                /></b>
+              Name:
+              {{users.0.friends.0.mutual_friends.0.name}};<br
+              />
+              Gender:
+              {{users.0.friends.0.mutual_friends.0.gender}};<br
+              />
+              Age: ({{users.0.friends.0.mutual_friends.0.age}});<br
+              />
+              <br />
+              <b>ID:
+                {{users.0.friends.1.mutual_friends.0.id}};<br
+                /></b>
+              Name:
+              {{users.0.friends.1.mutual_friends.0.name}};<br
+              />
+              Gender:
+              {{users.0.friends.1.mutual_friends.0.gender}};<br
+              />
+              Age: ({{users.0.friends.1.mutual_friends.0.age}});<br
+              />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br />
+
+    <h3>Groups:</h3>
+    <ul>
+      <li>
+        <b>ID:</b>
+        {{users.0.groups.0.id}};
+      </li>
+      <li>
+        <b>Name:</b>
+        {{users.0.groups.0.name}};
+      </li>
+      <li>
+        <b>Description:</b>
+        {{users.0.groups.0.description}};
+      </li><br />
+      <b>Memebers:</b>
+      <ul>
+        <li><b>ID:</b>
+          ({{users.0.groups.0.members.0.id}});</li>
+        <li><b>Name:</b>
+          {{users.0.groups.0.members.0.name}};</li>
+        <li><b>Gender:</b>
+          {{users.0.groups.0.members.0.gender}};</li>
+        <li><b>Age:</b>
+          ({{users.0.groups.0.members.0.age}});</li>
+      </ul>
+    </ul><hr />
+
+    <section>
+      <div>
+        <h2>User:</h2>
+        <div class='card' style='width: 18rem;'>
+          <div class='card-body'>
+            <h5 class='card-title'>{{users.1.id}}</h5>
+            <h6
+              class='card-subtitle mb-2 text-body-secondary'
+            >{{users.1.name}}</h6>
+            <p class='card-text'>Gender:
+              {{users.1.gender}}<br />
+              Age: ({{users.1.age}})</p>
+            <a
+              class='btn btn-primary'
+              data-bs-toggle='collapse'
+              href='#collapseExample'
+              role='button'
+              aria-expanded='false'
+              aria-controls='collapseExample'
+            ><b>Friends:</b></a>
+            <div class='collapse' id='collapseExample'>
+              <div class='card card-body'>
+                <b>ID:
+                  {{users.1.friends.0.id}};<br /></b>
+                Name:
+                {{users.1.friends.0.name}};<br />
+                Gender:
+                {{users.1.friends.0.gender}};<br />
+                Age: ({{users.1.friends.0.age}});<br />
+              </div>
+            </div>
+            <a
+              class='btn btn-primary'
+              data-bs-toggle='collapse'
+              href='#collapseExample'
+              role='button'
+              aria-expanded='false'
+              aria-controls='collapseExample'
+            ><b>Mutual friends:</b></a>
+            <div class='collapse' id='collapseExample'>
+              <div class='card card-body'>
+                <b>ID:
+                  {{users.1.friends.0.mutual_friends.0.id}};<br
+                  /></b>
+                Name:
+                {{users.1.friends.0.mutual_friends.0.name}};<br
+                />
+                Gender:
+                {{users.1.friends.0.mutual_friends.0.gender}};<br
+                />
+                Age: ({{users.1.friends.0.mutual_friends.0.age}});<br
+                />
+                <br />
+                <b>ID:
+                  {{users.1.friends.0.mutual_friends.1.id}};<br
+                  /></b>
+                Name:
+                {{users.1.friends.0.mutual_friends.1.name}};<br
+                />
+                Gender:
+                {{users.1.friends.0.mutual_friends.1.gender}};<br
+                />
+                Age: ({{users.1.friends.0.mutual_friends.1.age}});<br
+                />
+                <b>Mutual friends:</b>
+                <ul>
+                  <li><b>ID:</b>
+                    {{users.1.friends.0.mutual_friends.1.mutual_friends.0.id}};<br
+                    /></li>
+                  <li><b>Name:</b>
+                    {{users.1.friends.0.mutual_friends.1.mutual_friends.0.name}};<br
+                    /></li>
+                  <li><b>Gender:</b>
+                    {{users.1.friends.0.mutual_friends.1.mutual_friends.0.gender}};<br
+                    /></li>
+                  <li><b>Age:</b>
+                    ({{users.1.friends.0.mutual_friends.1.mutual_friends.0.age}});<br
+                    /></li>
+                </ul>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Groups:</h3>
+
+        <ul>
+          <li><b>ID:</b>
+            {{users.1.friends.0.groups.0.id}};</li>
+          <li><b>Name:</b>
+            {{users.1.friends.0.groups.0.name}};</li>
+          <li><b>Description:</b>
+            {{users.1.friends.0.groups.0.description}};</li><br
+          />
+          <b>Members:</b><br />
+          <ul>
+            <li><b>ID:</b>
+              ({{users.1.friends.0.groups.1.members.0.id}});</li>
+            <li><b>Name:</b>
+              {{users.1.friends.0.groups.0.members.0.name}};</li>
+            <li><b>Gender:</b>
+              {{users.1.friends.0.groups.0.members.0.gender}};</li>
+            <li><b>Age:</b>
+              ({{users.1.friends.0.groups.0.members.0.age}});</li>
+          </ul><br /><hr />
+
+          <li><b>ID:</b>
+            {{users.1.friends.0.groups.1.id}};</li>
+          <li><b>Name:</b>
+            {{users.1.friends.0.groups.1.name}};</li>
+          <li><b>Description:</b>
+            {{users.1.friends.0.groups.1.description}};</li><br
+          />
+          <b>Members:</b>
+          <ul>
+            <li><b>ID:</b>
+              ({{users.1.friends.0.groups.1.members.0.id}});</li>
+            <li><b>Name:</b>
+              {{users.1.friends.0.groups.1.members.0.name}};</li>
+            <li><b>Gender:</b>
+              {{users.1.friends.0.groups.1.members.0.gender}};</li>
+            <li><b>Age:</b>
+              {{users.1.friends.0.groups.1.members.0.age}};</li><hr
+            />
+
+            <li><b>ID:</b>
+              ({{users.1.friends.0.groups.1.members.1.id}});</li>
+            <li><b>Name:</b>
+              {{users.1.friends.0.groups.1.members.1.name}};</li>
+            <li><b>Gender:</b>
+              {{users.1.friends.0.groups.1.members.1.gender}};</li>
+            <li><b>Age:</b>
+              {{users.1.friends.0.groups.1.members.1.age}};</li>
+          </ul>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
