@@ -1,0 +1,169 @@
+<body>
+  <header>
+    <div>
+      <h1>Продам: <em>{{name}}</em></h1>
+    </div>
+    <br /><hr />
+    <div>
+      <h4>Опис: <em>{{description}}</em></h4>
+      Ціна:
+      {{price}}
+      / Категорія:
+      {{category}}.
+    </div>
+  </header>
+  <main>
+    <h4>Особливості:</h4>
+    <div>
+      <a
+        class='btn btn-primary'
+        data-bs-toggle='collapse'
+        href='#collapseExample'
+        role='button'
+        aria-expanded='false'
+        aria-controls='collapseExample'
+      >
+        <b>Processor</b>
+      </a>
+      <div class='collapse' id='collapseExample'>
+        <div class='card card-body'>
+          {{#with features}}
+            {{#with processor}}
+              <ul>
+                <li>Brand: <em>{{brand}}</em></li>
+                <li>Model: <em>{{model}}</em></li>
+                <li>Speed: <em>{{speed}}</em></li>
+                <li>Cores: <em>({{cores}})</em></li>
+                <li>Cache: <em>{{cache}}</em></li>
+              </ul>
+            {{/with}}
+          {{/with}}
+        </div>
+      </div>
+    </div><br />
+    <a
+      class='btn btn-primary'
+      data-bs-toggle='collapse'
+      href='#collapseExample'
+      role='button'
+      aria-expanded='false'
+      aria-controls='collapseExample'
+    >
+      <b>Memory</b>
+    </a>
+    <div class='collapse' id='collapseExample'>
+      <div class='card card-body'>
+        {{#with features}}
+          {{#with memory}}
+            <ul>
+              <li>Type: <em>{{type}}</em></li>
+              <li>Size: <em>{{size}}</em></li>
+              <li>Speed: <em>{{speed}}</em></li>
+            </ul>
+          {{/with}}
+        {{/with}}
+      </div>
+    </div>
+    <br /><br />
+    <div>
+      <b>Storage:</b>
+      {{#with features}}
+        {{#with storage}}
+          <ul>
+            <li>Type: <em>{{type}}</em></li>
+            <li>Size: <em>{{size}}</em></li>
+          </ul>
+        {{/with}}
+      {{/with}}
+    </div>
+
+    <div>
+{{#with features}}
+  {{#with display}}
+    {{> collapse text="Display" name="Size" rout=size name1="Resolution" rout1=resolution name2="Technology" rout2=technology name3="Color space" rout3=color_space name4="Brightness" rout4=brightness name5="Refresh rate" ruot5=refresh_rate}}
+  {{/with}}
+{{/with}}
+    </div>
+
+    <div>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Graphics:
+  </a>
+    <div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    {{#with features}}
+      {{#with graphics}}
+      <ul>
+        <li>Brand: <em>{{brand}};</em></li>
+        <li>Model: <em>{{model}};</em></li>
+        <li>Memory: <em>{{memory}};</em></li>
+      </ul>        
+      {{/with}}
+    {{/with}}
+  </div>
+</div>
+    </div><br>
+
+    <div>
+      <b>Ports:</b>
+    {{#with features}}
+    <ol>
+      <li>Type: <em>{{ports.[0].type}};</em></li>
+      <li>Count: <em>({{ports.0.count}});</em></li>
+      <b>Features:</b>
+        {{#each ports}}
+          {{#each features}}          
+        <ul>
+          <li>{{this}}</li>
+        </ul>
+          {{/each}}
+        {{/each}}
+        <li>Type: {{ports.[1].type}};</li>
+        <li>Count: ({{ports.[1].count}});</li>
+    </ol>      
+    {{/with}}  
+    </div>
+
+    <div>
+      <b>Battery:</b><br>
+      {{#with features}}
+      {{#with battery}}
+        Type: <em>{{type}};</em><br>
+        Capacity: <em>{{capacity}};</em><br>
+        Life: <em>{{life}};</em><br>
+      {{/with}}
+      <br>
+      <b>Weight:</b> <em>({{weight}});</em>
+      {{/with}}
+    </div><br>
+
+    <div>
+      <b>Dimensions:</b><br>
+      {{#with features}}
+      {{#with dimensions}}
+        <ul>
+          <li>Height: <em>({{height}})</em></li>
+          <li>Width: <em>({{width}})</em></li>
+          <li>Depth: <em>({{depth}})</em></li>
+        </ul>
+      {{/with}}
+      {{/with}}
+    </div><br>
+
+    {{#with features}}
+    <div><b>Operating system: {{operating_system}};</b></div>
+    {{/with}}
+
+    <div>
+      <b>Accessories:
+      {{#with features}}
+        {{#each accessories}}
+         <ul>
+          <li>Name: {{name}};</li>
+          <li>Price: ({{price}});</li>
+         </ul>
+        {{/each}}
+      {{/with}}
+    </div>
+  </main>
+</body>
