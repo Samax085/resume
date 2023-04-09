@@ -1,0 +1,132 @@
+<header>
+<div class="card">
+    <div class="card-body">       
+  {{#with heading}}
+    {{#with main}}
+    <div class="card">
+        <div class="card-body">
+      <h1>{{title}}</h1>
+      <p>{{text}}</p>
+      {{#with button_text}}
+        <div
+          class='badge bg-primary text-wrap'
+          style='width: 6rem;'
+        >
+          {{solid}}
+        </div><br /><br />
+        <div><button
+            type='button'
+            class='btn btn-outline-primary'
+          >{{outline}}</button></div>
+        </div>  
+    </div>  
+      {{/with}}
+    {{/with}} 
+
+<br>  
+
+    {{#with second}}
+    <div class="card">
+        <div class="card-body">  
+        <h2>{{title}}</h2>
+        <p>{{text}}</p>
+        {{#with button_text}}
+          <button
+            type='button'
+            class='btn btn-secondary'
+          >{{solid}}</button>
+          <br /><br />          
+            <button
+              type='button'
+              class='btn btn-outline-secondary'
+            >{{outline}}</button>
+    </div>      
+        </div>      
+        {{/with}}      
+    {{/with}}
+    
+    <br>         
+        {{#with subblock}}
+    <div class="card">
+        <div class="card-body">    
+            <h3>{{title}}</h3>
+            <p>{{text}}</p>
+        
+            {{#with button_text}}
+            <button type="button" class="btn btn-dark">{{solid}}</button><br><br>
+            <button type="button" class="btn btn-outline-dark">{{outline}}</button>
+            {{/with}}
+    </div>
+        </div>    
+        {{/with}}
+        {{/with}}
+    </div>
+  </div>
+  </header>
+
+<main>
+    <body>   
+    {{#with nested_display}}
+    <div class="card">
+        <div class="card-body">
+
+            <div class="display-1">
+                {{title}}
+            </div><br>
+
+            <div class="card">
+            <div class="card-body">
+                
+                {{#with children_display}}
+                <div class="display-4">
+                    {{title}}
+                </div>
+                <p>{{text}}</p>                
+                    <button type="button" class="btn btn-outline-warning">{{button.text}}</button>
+                {{/with}}
+
+    {{/with}}    
+
+            </div>    
+            </div>
+
+            <br>
+
+            <h6>{{nested_display.header_text}}</h6>
+            <button type="button" class="btn btn-info">{{nested_display.button.text}}</button>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="card">
+        <div class="card-body">
+            
+            {{#with paragraph}}
+            <p class="text-uppercase">
+                {{title}}
+            </p>
+            <p class="text-lowercase">
+                {{text}}
+            </p>
+
+            {{#with button}}
+                <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{url}}">
+  {{text}}
+</a>
+            {{/with}}
+<br><br>
+
+<div class="card">
+    <div class="cerd-body">
+            <ul>
+                <li><p><a class="link-offset-2 link-underline link-underline-opacity-0" href="{{list_name.0.url}}">{{list_name.0.text}}</a></p></li>
+                <li><p><a class="link-offset-2 link-underline link-underline-opacity-0" href="{{list_name.1.url}}">{{list_name.1.text}}</a></p></li>
+            </ul>            
+            {{/with}}
+</div>
+    </div>            
+        </div>
+    </div>    
+    </body>
+ </main>  
+   
