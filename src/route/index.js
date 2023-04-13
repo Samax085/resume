@@ -32,6 +32,13 @@ var footer = {
 router.get('/', function (req, res) {
   res.render('index', {})
 })
+
+router.get('/bootstrap', function (req, res) {
+  res.render('bootstrap', {
+    layout: 'default',
+  })
+})
+
 router.get('/summary', function (req, res) {
   res.render('summary', {
     page: {
