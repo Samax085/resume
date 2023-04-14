@@ -1,0 +1,90 @@
+<header>
+  <nav>
+    <div class='card mt-3'>
+      <div class='row'>
+        <div class='col-12'>
+          <div class='nav nav-tabs p-2'>
+            <div class='nav-item me-2'>
+              <a
+                class='nav-link'
+                href='{{navigation.links.0.href}}'
+              >{{navigation.links.0.text}}</a>
+            </div>
+            <div class='nav-item me-2'>
+              <a
+                class='nav-link'
+                href='{{navigation.links.1.href}}'
+              >{{navigation.links.1.text}}</a>
+            </div>
+            <div class='nav-item'>
+              <a
+                class='nav-link'
+                href='{{navigation.links.2.href}}'
+              >{{navigation.links.2.text}}</a>
+            </div>
+            <div class='nav-item'>
+              <a
+                class='nav-link disabled'
+                href='#'
+              >{{navigation.Logo}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <main>
+    <h4 class='text-center my-5'>{{newsBlock.title}}</h4>
+
+    <div class='row'>
+      {{!-- <div class='col-9'> --}}
+        {{#with newsBlock}}
+          {{#each cards}}
+
+            <div class='card text-bg-secondary col-3 g-5 mb-3'>
+              <div class='card-header'>{{title}}
+                {{#if isTop}}
+                  <div
+                    class='badge text bg-danger rounded-pill'
+                  >Топ</div>
+                {{/if}}
+                {{#if isNew}}
+                  <div
+                    class='badge text bg-success rounded-pill'
+                  >Нове</div>
+                {{/if}}
+              </div>
+
+              <div class='card-body'>
+                <p class='card-text'>{{description}}</p>
+              </div>
+            </div>
+
+          {{/each}}
+        {{/with}}
+      </div>
+    </div>
+
+    <hr />
+
+    <div class='row'>
+      <div class='col-12'>
+        <div class='nav'>
+          <div class='nav-tabs'>
+            {{#with goodsBlock}}
+              {{#each tabs}}
+                <ul>
+                  <li class='nav-item btn btn-link'></li>
+                </ul>
+              {{/each}}
+            {{/with}}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
