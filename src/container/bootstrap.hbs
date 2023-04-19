@@ -60,5 +60,101 @@
         </div>
       </div>
     </div>
+    {{! Створення input  }}
+
+    <div class='row g-5'>
+      <div class='col-12'>
+        <label class='form-label'>Email address</label>
+        <input class='form-control' />
+        <div class='form-text text-danger'>Error. You need
+          to set correct email</div>
+      </div>
+
+      <br /><hr />
+
+      <div class='col-12'>
+        <label class='form-lable'>Select role</label>
+        <select class='form-select form-select-lg'>
+          {{! form-select-lg вказує величину поля для вводу (lg/sm) }}
+          <option value='1'>Admin</option>
+          <option value='2'>User</option>
+        </select>
+      </div>
+
+    </div>
+
+    <br /><hr />
+
+    <div class='row'>
+      <div class='col-4'>
+        <div class='form-label'>Select food</div>
+
+        <div class='form-check'>
+          <lable class='form-check-lable'>Apple</lable>
+          <input
+            type='checkbox'
+            name='food'
+            class='form-check-input'
+          />
+        </div>
+
+        <div class='form-check'>
+          <lable class='form-check-lable'>Orange</lable>
+          <input
+            type='checkbox'
+            name='food'
+            class='form-check-input'
+          />
+        </div>
+
+        <div class='form-check'>
+          <lable class='form-check-lable'>Banana</lable>
+          <input
+            type='checkbox'
+            name='food'
+            class='form-check-input'
+          />
+        </div>
+      </div>
+
+      <div class='col-4'>
+        <div class='form-label'>Select food</div>
+        <div class='form-check'>
+          <lable class='form-check-lable'>Apple</lable>
+          <input
+            type='radio'
+            name='food'
+            class='form-check-input'
+          />
+        </div>
+        <div class='form-check'>
+          <lable class='form-check-lable'>Orange</lable>
+          <input
+            type='radio'
+            name='food'
+            class='form-check-input'
+          />
+        </div>
+        <div class='form-check'>
+          <lable class='form-check-lable'>Banana</lable>
+          <input
+            type='radio'
+            name='food'
+            class='form-check-input'
+          />
+        </div>
+      </div>
+
+      <div class='col-4'>
+        <div class='form-check form-switch'>
+          <lable class='form-check-lable'>Have bonus</lable>
+          <input
+            type='checkbox'
+            name='food'
+            class='form-check-input'
+          />
+        </div>
+      </div>
+    </div>
   </main>
 </body>
