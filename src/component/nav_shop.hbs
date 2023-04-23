@@ -1,0 +1,15 @@
+<nav>
+    <div class='card mt-3'>
+        <div class="nav">
+      {{#with navigation}}
+        {{#each links}}
+          <ul class="nav">
+            <li class='nav-item'>
+                <a class="nav-link mt-2 {{#if @last}} disabled {{/if}}" href="{{href}}">{{text}}</a>
+            </li>
+          </ul>
+        {{/each}}
+      {{/with}}
+      </div>
+    </div>
+  </nav>
