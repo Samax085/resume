@@ -33,7 +33,7 @@
 
 {{!  filterBlock }}
 <div class='row my-5'>
-  <div class='col-4'>
+  <div class='col-3'>
     <div class='card'>
       <div class='card-body'>
         {{#with filterBlock}}
@@ -140,9 +140,14 @@
     </div>
   </div>
   {{!  filterBlock end }}
-  <div class="col-4">
+  <div class="col-8 row">
     {{#each goodsList}}
       {{> catalogitem}}
     {{/each}}
   </div>
 </div>
+
+<div class="mb-5">
+  {{> shop_alert}}
+</div>
+<hr>
