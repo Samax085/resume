@@ -91,65 +91,9 @@
     <br><hr>
 
     <section>
-      {{!-- ReviewList section start --}}
-      <div class="card mt-5">
-        <div class="card-body">
-          {{#each reviewList}} <br>
-          <div class="card">
-            {{#with title}}
-            <div class="card-header">
-               <h4>{{userName}}</h4>
-               <p class="card-text">{{caption}}</p>
-               <p>{{date}}</p>
-            </div>            
-            {{/with}}
-            <div class="card">
-              <div class="card-body">
-              {{#with reviewBody}}              
-                {{#with seller}}
-                  <p class="mt-2">{{title}}: {{value}}</p>                 
-                {{/with}}                
-                {{#with rating}}
-                  {{title}}: {{value}}
-                {{/with}}
-                <br><br>
-                {{#each text}}
-                {{this}}
-                {{/each}}
-                {{#with advantages}}
-                <br><br>
-                <b>{{title}}:</b>
-                {{text}}
-                {{/with}}
-                <br><br>
-                {{#with disadvantages}}
-                <b>{{title}}</b>
-                {{text}}
-                {{/with}}
-                <div class="row">
-                  {{#each images}}
-                  <div class="col-1 me-3 mt-3">                                          
-                    <img src="{{this}}" alt="Photo">                   
-                  </div>
-                  {{/each}}
-                </div>
-                <br>
-                {{#each coments}}
-                <div class="card ms-5 mt-2">
-                  <div class="card-body">
-                    <h6 class="card-title">{{userName}}</h6>                    
-                    <p class="card-text">{{date}}</p>
-                    <p>{{text}}</p>
-                  </div>
-                </div>
-                {{/each}}
-              {{/with}}
-              </div>
-            </div>
-          </div>
-          {{/each}} <br>
-        </div>
-      </div>
+      {{#each reviewList}}
+      {{> reviewItem}}
+      {{/each}}
     </section>
 
     <section>
