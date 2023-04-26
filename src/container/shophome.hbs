@@ -109,21 +109,7 @@
     </section>
 
     <hr>
-
-    <section>
-        {{#with service}}
-        <div class='alert alert-success text-center'>
-            <h2>{{title}}</h2>
-            <p>{{description}}</p>
-            {{#each buttons}}
-            <div class="row-colum">            
-<a class="btn btn-primary mt-2" href="{{link}}">{{text}}</a>
-           </div>
-            {{/each}}
-        </div>
-        {{/with}}
-    </section>
-
+    {{> shop_alert}}    
     <hr>
 
   </main> 

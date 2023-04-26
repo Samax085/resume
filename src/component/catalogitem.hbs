@@ -1,0 +1,63 @@
+<div class='card m-2 col-5'>
+  <img
+    src='{{img}}'
+    class='m-2 card-img-top'
+    alt='{{name}}'
+  />
+  <div class='card-body'>
+    <div class='mb-3'>
+      {{#if isHot}}
+        <span class='badge text-bg-warning'>HOT!</span>
+      {{/if}}
+      {{#if isNew}}
+        <span class='badge text-bg-primary'>Нове</span>
+      {{/if}}
+    </div>
+    <div>
+      {{#if isFast}}
+        <button
+          type='button'
+          class='btn btn-primary btn-sm'
+        >Купити зараз</button>
+      {{/if}}
+    </div>
+    <div class='my-2'>
+      {{#if isFree}}
+        <button
+          type='button'
+          class='btn btn-secondary btn-sm'
+        >Купити в кредит</button>
+      {{/if}}
+    </div>
+    <p><b>{{name}}</b></p>
+    {{#with review}}
+      <p>{{amount}}</p>
+      <p>{{text}}</p>
+    {{/with}}
+    <div class='display-6'><b>{{price}}</b></div>
+    <p>{{delivery}}</p>
+    {{#each buttons}}
+      <div>
+        {{#if isPrimary}}
+          <a
+            class='btn btn-primary'
+            href='{{link}}'
+          >{{text}}</a>
+        {{/if}}
+      </div>
+      <div class='mt-2'>
+        {{#if isSecondary}}
+          <a
+            class='btn btn-secondary'
+            href='{{link}}'
+          >{{text}}</a>
+        {{/if}}
+      </div>
+    {{/each}}
+    {{#each characteristics}}
+      <ul>
+        <li>{{title}}: {{value}}</li>
+      </ul>
+    {{/each}}
+  </div>
+</div>
