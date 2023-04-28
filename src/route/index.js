@@ -30,7 +30,45 @@ var footer = {
 }
 
 router.get('/', function (req, res) {
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    pageTitle: 'My Resume',
+    name: 'Oleksandr',
+    surname: 'Maksymov',
+    infoPage: 'Resume project',
+    title: 'TASK',
+    task: [
+      { name: 'task21', link: '/task21' },
+      { name: 'task22', link: '/task22' },
+      { name: 'task31', link: '/task31' },
+    ],
+    title2: 'Resume',
+    resume: [
+      { name: 'person', link: '/person' },
+      { name: 'facebook', link: '/facebook' },
+      { name: 'bio', link: '/bio' },
+      { name: 'skills', link: '/skills' },
+      { name: 'work', link: '/work' },
+      { name: 'summary', link: '/summary' },
+      { name: 'education', link: '/education' },
+    ],
+    title3: 'IT',
+    another: [
+      { name: 'js', link: '/js' },
+      { name: 'web', link: '/web' },
+    ],
+    title4: 'Shop',
+    shop: [
+      { name: 'mac', link: '/mac' },
+      { name: 'car', link: '/car' },
+      { name: 'Shop home', link: '/shophome' },
+      { name: 'Shop product', link: '/shopproduct' },
+      { name: 'Shop order', link: '/shoporder' },
+      { name: 'Shop cart', link: '/shopcart' },
+      { name: 'Shop review', link: 'shopreview' },
+      { name: 'Shop catalog', link: '/shopcatalog' },
+    ],
+  })
 })
 
 router.get('/bootstrap', function (req, res) {
@@ -319,6 +357,181 @@ router.get('/js', function (req, res) {
         type: 'blog',
       },
     ],
+  })
+})
+
+router.get('/car', function (req, res) {
+  res.render('car', {
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+    color: 'silver',
+    features: {
+      interior: {
+        seats: {
+          material: 'leather',
+          color: 'black',
+          heated: true,
+          ventilated: true,
+        },
+        dashboard: {
+          material: 'plastic',
+          color: 'black',
+          display: {
+            type: 'LCD',
+            size: 10.1,
+            resolution: '1280x720',
+            touchscreen: true,
+          },
+        },
+        audio: {
+          system: 'JBL',
+          speakers: 8,
+          subwoofer: true,
+          bluetooth: true,
+          USB: true,
+        },
+      },
+      exterior: {
+        wheels: {
+          size: 18,
+          type: 'alloy',
+          color: 'silver',
+        },
+        headlights: {
+          type: 'LED',
+          brightness: 'high',
+          automatic: true,
+        },
+        sunroof: {
+          type: 'panoramic',
+          size: 'large',
+          automatic: true,
+        },
+      },
+      safety: {
+        airbags: {
+          front: 2,
+          side: 2,
+          knee: 2,
+          rear: 2,
+        },
+        assistance: {
+          blind_spot_monitoring: true,
+          rear_cross_traffic_alert: true,
+          lane_departure_warning: true,
+          adaptive_cruise_control: true,
+          collision_warning: true,
+        },
+      },
+    },
+    engine: {
+      type: 'gasoline',
+      displacement: 2.5,
+      horsepower: 206,
+      torque: 186,
+      transmission: {
+        type: 'automatic',
+        gears: 8,
+      },
+    },
+    fuel_economy: {
+      city: 28,
+      highway: 39,
+      combined: 32,
+    },
+    price: {
+      base: 25900,
+      destination: 995,
+      options: {
+        navigation: 1200,
+        moonroof: 800,
+        premium_paint: 595,
+      },
+      total: 28990,
+    },
+  })
+})
+
+router.get('/mac', function (req, res) {
+  res.render('mac', {
+    name: 'Apple MacBook Pro',
+    description: 'The ultimate notebook for power users',
+    price: 1999.99,
+    category: 'Computers & Tablets',
+    features: {
+      processor: {
+        brand: 'Intel',
+        model: 'Core i9',
+        speed: '2.3 GHz',
+        cores: 8,
+        cache: '16 MB',
+      },
+      memory: {
+        type: 'DDR4',
+        size: '32 GB',
+        speed: '2666 MHz',
+      },
+      storage: {
+        type: 'SSD',
+        size: '1 TB',
+      },
+      display: {
+        size: '16 inches',
+        resolution: '3072x1920',
+        technology: 'Retina',
+        color_space: 'P3',
+        brightness: '500 nits',
+        refresh_rate: '60 Hz',
+      },
+      graphics: {
+        brand: 'AMD',
+        model: 'Radeon Pro 5500M',
+        memory: '4 GB GDDR6',
+      },
+      ports: [
+        {
+          type: 'Thunderbolt 3',
+          count: 4,
+          features: [
+            'Charging',
+            'DisplayPort',
+            'Thunderbolt (up to 40 Gbps)',
+            'USB 3.1 Gen 2 (up to 10 Gbps)',
+          ],
+        },
+        {
+          type: 'HDMI',
+          count: 1,
+        },
+      ],
+      battery: {
+        type: 'Lithium Polymer',
+        capacity: '100 Wh',
+        life: 'Up to 11 hours',
+      },
+      weight: '4.3 pounds',
+      dimensions: {
+        height: '0.64 inch',
+        width: '14.09 inches',
+        depth: '9.68 inches',
+      },
+      operating_system: 'macOS',
+      accessories: [
+        {
+          name: 'Apple Magic Keyboard',
+          price: 99.99,
+        },
+        {
+          name: 'Apple Magic Mouse 2',
+          price: 79.99,
+        },
+        {
+          name: 'USB-C to USB Adapter',
+          price: 19.99,
+        },
+      ],
+    },
   })
 })
 

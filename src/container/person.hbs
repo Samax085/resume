@@ -1,14 +1,16 @@
 <header>
   <section>
   {{#with person}}
-    <div>
+    <div class="card my-3">
+      <div class="card-body">
       <h1>{{name}}</h1>
       Age
       {{age}}
       -
       {{gender}}
+      </div>
     </div>
-    <br />
+    
     {{#with address}}
       <address>{{country}}
         /
@@ -20,46 +22,47 @@
         / (zip){{zip}}
       </address>
     {{/with}}
-  </section>
-  <hr />
+  </section>  
 </header>
+
 <body>
   <main>
-    <section>
-    <div>
+    <div class="row">
+      <div class="col-6">   
       <h2>My education:</h2>
-    </div>    
+      </div>
+      <div class="col-6">
+        <h2>Work Experience</h2>
+      </div> 
+    </div>   
+    <div class="row">
+      <div class="col-6">  
     {{#each education}}
-    <div>
-      <h3>Degree: <em>{{degree}};</em></h3>
+    <div class="card">
+      <div class="card-body">
+      <p class="">Degree: <em>{{degree}};</em></p>
       <h3>Major: <em>{{major}};</em></h3>
       <h3>University: <em>{{university}};</em></h3>
       <h3>Graduation Year: <em>{{graduationYear}};</em></h3>
+      </div>
     </div>
     {{/each}}
-    </section>
-
-    <hr>
-    <br>
-
-    <div>
-        <h2>Work Experience:</h2>
-    </div>
-
-<section>
-    {{#each workExperience}}
-    <div>
-        <ul>
+      </div>    
+   
+ <div class="col-6">
+  {{#each workExperience}}   
+      <div class="card">
+        <div class="card-body">
+          <ul>
             <li>Company - <b>{{company}}</b>;</li>
             <li>Position - <b>{{title}}</b>;</li>
             <li>Period of work: <b>{{startDate}} -- {{endDate}};</b></li>              
-        </ul>
+          </ul>
+        </div>  
+      </div>
     </div>
-    <hr>
-    <br>
-</section>
+</div> 
 
-<section></section>
     <div>
       <h2>About company:</h2>
         <ul>
@@ -148,12 +151,11 @@
       <h2> My responsibilities</h2>
         {{#with responsibilities}}
           <ul>
-            <li><em>{{0}}</em>;</li>
+            <li><em>{{this}}</em>;</li>
             <li><em>{{1}}</em>;</li>
           </ul>
         {{/with}}
-    </div>
-    
+    </div>    
     {{/each}}
   </main>
   {{/with}}

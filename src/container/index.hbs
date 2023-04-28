@@ -1,17 +1,65 @@
-{{! 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
-<div class='p-5'>
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-  <h2>Hello world</h2>
-  <button
-    type='button'
-    class='btn btn-primary'
-  >Купити</button>
-</div>
+<body>
+  <h2 class='mt-3'>Список сторінок</h2>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing
+    elit. Assumenda cupiditate nulla iure perspiciatis,
+    eligendi possimus unde impedit commodi labore, nisi
+    recusandae sit natus facere tempore, omnis maxime
+    similique praesentium voluptatibus!</p>
+  <div class='row'>
+    <div class='col-1'>
+      <h5 class='mt-4'>{{title}}</h5>
+      <ul class='nav flex-column'>
+        {{#each task}}
+          <li class='nav-item mt-1'>
+            <a
+              class='btn btn-primary nav-link-active'
+              href='{{link}}'
+            >{{name}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
 
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+    <div class='col-1'>
+      <h5 class='mt-4'>{{title2}}</h5>
+      <ul class='nav flex-column'>
+        {{#each resume}}
+          <li class='nav-item mt-1'>
+            <a
+              class='btn btn-primary nav-link-active'
+              href='{{link}}'
+            >{{name}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class='col-1'>
+      <h5 class='mt-4'>{{title3}}</h5>
+      <ul class='nav flex-column'>
+        {{#each another}}
+          <li class='nav-item mt-1'>
+            <a
+              class='btn btn-primary nav-link-active'
+              href='{{link}}'
+            >{{name}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class='col-2'>
+      <h5 class='mt-4'>{{title4}}</h5>
+      <ul class='nav flex-column'>
+        {{#each shop}}
+          <li class='nav-item mt-1'>
+            <a
+              class='btn btn-primary nav-link-active'
+              href='{{link}}'
+            >{{name}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</body>
